@@ -49,9 +49,9 @@ function start() {
     // and way too many boxes
     let circle_size = 80,
         circle_gap = 120,
-        x = circle_size / 2,
-        y = circle_size / 2,
-        color_max_circles = Math.floor((window_width + window_height) / circle_gap),
+        x = circle_size / 2 + 30,
+        y = circle_size / 2 + 30,
+        color_max_circles = Math.floor((window_width + window_height - 60) / circle_gap),
         color_scale = chroma.scale(["green", "purple"]).mode('lab')
     while (x + circle_gap / 2 <= window_width) {
         y = 0
