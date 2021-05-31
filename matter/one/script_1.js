@@ -12,7 +12,15 @@ function start() {
     // create a renderer
     var render = Render.create({
         element: document.querySelector("body"),
-        engine: engine
+        engine: engine,
+        options: {
+            width: 800,
+            height: 600,
+            pixelRatio: 1,
+            background: '#FAFAFA',
+            wireframes: false,
+            showMousePosition: false,
+        }
     });
 
     // create two boxes and a ground
