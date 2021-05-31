@@ -44,7 +44,11 @@ function start() {
     while (x + box_size / 2 <= window_width) {
         y = 0
         while (y + box_size / 2 <= window_height) {
-            var box = Bodies.rectangle(x, y, box_size, box_size);
+            var box = Bodies.rectangle(x, y, box_size, box_size, {
+                render: {
+                    fillStyle: "#aabbcc", // x / box_size + y / box_size
+                }
+            });
             bodies.push(box)
             y += box_size
         }
