@@ -1,24 +1,26 @@
-
+// module aliases
+var Engine = Matter.Engine,
+    Render = Matter.Render,
+    Runner = Matter.Runner,
+    Bodies = Matter.Bodies,
+    Composite = Matter.Composite;
 
 function start() {
-    // module aliases
-    var Engine = Matter.Engine,
-        Render = Matter.Render,
-        Runner = Matter.Runner,
-        Bodies = Matter.Bodies,
-        Composite = Matter.Composite;
-    
     // create an engine
     var engine = Engine.create();
+    
+    var canvas = document.getElementById("canvas")
+    canvas.width = window.innerWidth
+    canvas.height = window.innerHeight
 
     // create a renderer
     var render = Render.create({
 //         element: document.querySelector("body"),
-        canvas: document.getElementById("canvas"),
+        canvas: canvas,
         engine: engine,
         options: {
-            width: 800,
-            height: 600,
+            width: canvas.width,
+            height: canvas.height,
             pixelRatio: 1,
             background: '#FAFAFA',
             wireframes: false,
