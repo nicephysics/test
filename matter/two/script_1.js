@@ -33,13 +33,26 @@ function start() {
         }
     });
 
-    // create two boxes and a ground
-    var boxA = Bodies.rectangle(window_width / 2, 200, 80, 80);
-    var boxB = Bodies.rectangle(window_width / 2 + 50, 50, 80, 80);
+    var bodies = []
+    
+    // create a ground
     var ground = Bodies.rectangle(window_width / 2, window_height + 10, window_width + 10, 60, { isStatic: true });
+    bodies.push(ground)
+    
+    // and way too many boxes
+    let box_size = 80, x = box_size / 2, y = box_size / 2
+    while (x + box_size / 2 <= window_width) {
+        y = 0
+        while (y + box_size / 2 <= window_height) {
+            var box = Bodies.rectangle(x, y, box_size, box_size);
+            bodies.push(box)
+            y += box_size
+        }
+        x += box_size
+    }
 
     // add all of the bodies to the world
-    Composite.add(engine.world, [boxA, boxB, ground]);
+    Composite.add(engine.world, bodies);
 
     // run the renderer
     Render.run(render);
