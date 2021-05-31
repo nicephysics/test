@@ -11,8 +11,8 @@ function start() {
     var engine = Engine.create();
     
     var canvas = document.getElementById("canvas")
-    var window_width = window.outerWidth
-    var window_height = window.outerHeight
+    var window_width = window.innerWidth
+    var window_height = window.innerHeight
     
     canvas.width = window_width
     canvas.height = window_height
