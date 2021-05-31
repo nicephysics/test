@@ -40,13 +40,18 @@ function start() {
     bodies.push(ground)
     
     // and way too many boxes
-    let box_size = 80, x = box_size / 2, y = box_size / 2
+    let box_size = 80,
+        x = box_size / 2,
+        y = box_size / 2,
+        max_box = Math.floor((window_width + window_height) / box_size),
+        box_color_scale = chroma.scale(["green", "red"]).mode('lab')
     while (x + box_size / 2 <= window_width) {
         y = 0
         while (y + box_size / 2 <= window_height) {
+            var box_color = (x / box_size + y / box_size) / max_box
             var box = Bodies.rectangle(x, y, box_size, box_size, {
                 render: {
-                    fillStyle: "#aabbcc", // x / box_size + y / box_size
+                    fillStyle: box_color_scale(box_color).hex()
                 }
             });
             bodies.push(box)
