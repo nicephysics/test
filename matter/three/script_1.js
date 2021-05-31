@@ -54,7 +54,7 @@ function start() {
     while (x + circle_gap / 2 <= window_width) {
         y = 0
         while (y + circle_gap / 2 <= window_height) {
-            var color_number = (x / circle_size + y / circle_size) / color_max_circles
+            var color_number = (x / circle_gap + y / circle_gap) / color_max_circles
             var circle = Bodies.circle(x, y, circle_size / 2, { // options
                 render: {
                     fillStyle: color_scale(color_number).hex()
