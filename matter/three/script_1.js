@@ -98,6 +98,13 @@ window.addEventListener("resize", function() {
     start()
 })
 
+var keys = {
+    up: false,
+    down: false,
+    left: false,
+    right: false,
+}
+
 window.addEventListener("keydown", function(event) {
     if (event.defaultPrevented) {
         return; // Do nothing if event is already handled
@@ -106,29 +113,67 @@ window.addEventListener("keydown", function(event) {
         case "KeyS":
         case "ArrowDown":
             // down
-            engine.gravity.x = 0
-            engine.gravity.y = 1
+            keys.down = true
             break;
         case "KeyW":
         case "ArrowUp":
             // up
-            engine.gravity.x = 0
-            engine.gravity.y = -1
+            keys.up = true
             break;
         case "KeyA":
         case "ArrowLeft":
             // left
-            engine.gravity.x = -1
-            engine.gravity.y = 0
+            keys.left = true
             break;
         case "KeyD":
         case "ArrowRight":
             // right
-            engine.gravity.x = 1
-            engine.gravity.y = 0
+            keys.right = true
             break;
     }
     
     // Consume (eat!) the event so it doesn't get handled twice
     event.preventDefault();
 })
+
+
+window.addEventListener("keyup", function(event) {
+    if (event.defaultPrevented) {
+        return; // Do nothing if event is already handled
+    }
+    switch (event.code) {
+        case "KeyS":
+        case "ArrowDown":
+            // down
+            keys.down = false
+            break;
+        case "KeyW":
+        case "ArrowUp":
+            // up
+            keys.up = false
+            break;
+        case "KeyA":
+        case "ArrowLeft":
+            // left
+            keys.left = false
+            break;
+        case "KeyD":
+        case "ArrowRight":
+            // right
+            keys.right = false
+            break;
+    
+    // Consume (eat!) the event so it doesn't get handled twice
+    event.preventDefault();
+})
+
+setInterval(function() {
+    let x = 0,
+        y = 0
+    if (keys.up) y--
+    if (keys.down) y++
+    if (keys.left) x--
+    if (keys.right) x++
+    engine.gravity.x = x
+    engine.gravity.y = y
+}, 1000 / 60)
