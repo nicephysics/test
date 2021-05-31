@@ -54,7 +54,7 @@ function start() {
         color_max_circles = Math.floor((window_width + window_height - 60) / circle_gap),
         color_scale = chroma.scale(["green", "purple"]).mode('lab')
     while (x + circle_gap / 2 <= window_width) {
-        y = 0
+        y = circle_size / 2 + 30
         while (y + circle_gap / 2 <= window_height) {
             var color_number = (x / circle_gap + y / circle_gap) / color_max_circles
             var circle = Bodies.circle(x, y, circle_size / 2, { // options
