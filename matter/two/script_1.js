@@ -59,6 +59,13 @@ function start() {
         }
         x += box_size
     }
+    
+    var THE_BALL = Bodies.circle(window_width / 2, window_height * -5, box_size * 2.5, {
+        render: {
+            fillStyle: "#4287f5"
+        }
+    });
+    bodies.push(THE_BALL)
 
     // add all of the bodies to the world
     Composite.add(engine.world, bodies);
