@@ -23,7 +23,7 @@ function start() {
             pixelRatio: 1,
             background: '#FAFAFA',
             wireframes: false,
-            showMousePosition: true,
+            showMousePosition: false,
         }
     });
 
