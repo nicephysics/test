@@ -10,8 +10,8 @@ function start() {
     var engine = Engine.create();
     
     var canvas = document.getElementById("canvas")
-    canvas.width = window.innerWidth
-    canvas.height = window.innerHeight
+    canvas.width = window.outerWidth
+    canvas.height = window.outerHeight
     console.log(canvas)
 
     // create a renderer
