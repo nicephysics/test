@@ -103,6 +103,17 @@ var keys = {
     down: false,
     left: false,
     right: false,
+    update: function() {
+        let x = 0,
+            y = 0
+        if (keys.up) y--
+        if (keys.down) y++
+        if (keys.left) x--
+        if (keys.right) x++
+        engine.gravity.x = x
+        engine.gravity.y = y
+    }
+}
 }
 
 window.addEventListener("keydown", function(event) {
@@ -168,12 +179,5 @@ window.addEventListener("keyup", function(event) {
 })
 
 setInterval(function() {
-    let x = 0,
-        y = 0
-    if (keys.up) y--
-    if (keys.down) y++
-    if (keys.left) x--
-    if (keys.right) x++
-    engine.gravity.x = x
-    engine.gravity.y = y
+    keys.update()
 }, 1000 / 60)
