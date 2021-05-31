@@ -54,3 +54,7 @@ function start() {
 window.addEventListener("load", function() {
     start()
 })
+
+window.addEventListener("resize", function() {
+    start()
+})
