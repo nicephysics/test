@@ -24,6 +24,8 @@ function start() {
         engine: engine,
         mouse: Mouse.create(canvas),
         options: {
+            width: window_width,
+            height: window_height,
             pixelRatio: 1,
             background: '#FAFAFA',
             wireframes: false,
