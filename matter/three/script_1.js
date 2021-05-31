@@ -114,7 +114,6 @@ var keys = {
         engine.gravity.y = y
     }
 }
-}
 
 window.addEventListener("keydown", function(event) {
     if (event.defaultPrevented) {
@@ -125,22 +124,22 @@ window.addEventListener("keydown", function(event) {
         case "ArrowDown":
             // down
             keys.down = true
-            break;
+            break
         case "KeyW":
         case "ArrowUp":
             // up
             keys.up = true
-            break;
+            break
         case "KeyA":
         case "ArrowLeft":
             // left
             keys.left = true
-            break;
+            break
         case "KeyD":
         case "ArrowRight":
             // right
             keys.right = true
-            break;
+            break
     }
     
     // Consume (eat!) the event so it doesn't get handled twice
@@ -157,22 +156,22 @@ window.addEventListener("keyup", function(event) {
         case "ArrowDown":
             // down
             keys.down = false
-            break;
+            break
         case "KeyW":
         case "ArrowUp":
             // up
             keys.up = false
-            break;
+            break
         case "KeyA":
         case "ArrowLeft":
             // left
             keys.left = false
-            break;
+            break
         case "KeyD":
         case "ArrowRight":
             // right
             keys.right = false
-            break;
+            break
     
     // Consume (eat!) the event so it doesn't get handled twice
     event.preventDefault();
