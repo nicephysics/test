@@ -13,7 +13,6 @@ function start() {
     var canvas = document.getElementById("canvas")
     canvas.width = window.outerWidth
     canvas.height = window.outerHeight
-    console.log(canvas)
 
     // create a renderer
     var render = Render.create({
