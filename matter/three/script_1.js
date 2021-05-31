@@ -172,6 +172,7 @@ window.addEventListener("keyup", function(event) {
             // right
             keys.right = false
             break
+    }
     
     // Consume (eat!) the event so it doesn't get handled twice
     event.preventDefault();
