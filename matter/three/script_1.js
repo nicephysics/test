@@ -11,6 +11,8 @@ var engine
 function start() {
     // create the engine
     engine = Engine.create();
+    engine.gravity.x = 0
+    engine.gravity.y = 0
     
     var canvas = document.getElementById("canvas")
     var window_width = window.innerWidth
