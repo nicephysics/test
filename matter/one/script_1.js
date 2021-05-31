@@ -44,6 +44,6 @@ function start() {
     Runner.run(runner, engine);
 }
 
-document.addEventListener("load", function() {
+window.addEventListener("load", function() {
     start()
 })
