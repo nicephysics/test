@@ -9,7 +9,7 @@ function start() {
     // create an engine
     var engine = Engine.create();
     
-    var canvas = document.querySelector("canvas")
+    var canvas = document.getElementById("canvas")
     canvas.width = window.outerWidth
     canvas.height = window.outerHeight
     console.log(canvas)
