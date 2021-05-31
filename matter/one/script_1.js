@@ -13,7 +13,8 @@ function start() {
 
     // create a renderer
     var render = Render.create({
-        element: document.querySelector("body"),
+//         element: document.querySelector("body"),
+        canvas: document.getElementById("canvas"),
         engine: engine,
         options: {
             width: 800,
