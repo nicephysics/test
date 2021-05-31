@@ -50,7 +50,7 @@ function start() {
         x = circle_size / 2,
         y = circle_size / 2,
         color_max_circles = Math.floor((window_width + window_height) / circle_gap),
-        color_scale = chroma.scale(["yellow", "purple"]).mode('lab')
+        color_scale = chroma.scale(["green", "purple"]).mode('lab')
     while (x + circle_gap / 2 <= window_width) {
         y = 0
         while (y + circle_gap / 2 <= window_height) {
