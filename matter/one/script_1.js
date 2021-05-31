@@ -12,6 +12,7 @@ function start() {
     var canvas = document.getElementById("canvas")
     canvas.width = window.innerWidth
     canvas.height = window.innerHeight
+    console.log(canvas)
 
     // create a renderer
     var render = Render.create({
@@ -19,8 +20,6 @@ function start() {
         canvas: canvas,
         engine: engine,
         options: {
-            width: canvas.width,
-            height: canvas.height,
             pixelRatio: 1,
             background: '#FAFAFA',
             wireframes: false,
