@@ -49,7 +49,7 @@ function start() {
         y = 0
         while (y + box_size / 2 <= window_height) {
             var box_color = (x / box_size + y / box_size) / max_box
-            var box = Bodies.rectangle(x, y, box_size, box_size, {
+            var box = Bodies.rectangle(x, y, box_size, box_size, { // options
                 render: {
                     fillStyle: box_color_scale(box_color).hex()
                 }
