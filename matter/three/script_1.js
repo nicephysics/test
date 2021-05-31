@@ -49,13 +49,13 @@ function start() {
         circle_gap = 120,
         x = circle_size / 2,
         y = circle_size / 2,
-        max_box = Math.floor((window_width + window_height) / circle_gap),
+        color_max_circles = Math.floor((window_width + window_height) / circle_gap),
         color_scale = chroma.scale(["yellow", "purple"]).mode('lab')
     while (x + circle_gap / 2 <= window_width) {
         y = 0
         while (y + circle_gap / 2 <= window_height) {
-            var color_number = (x / circle_size + y / circle_size) / max_box
-            var circle = Bodies.circle(x, y, circle_size, { // options
+            var color_number = (x / circle_size + y / circle_size) / color_max_circles
+            var circle = Bodies.circle(x, y, circle_size / 2, { // options
                 render: {
                     fillStyle: color_scale(color_number).hex()
                 }
