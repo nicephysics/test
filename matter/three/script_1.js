@@ -52,7 +52,7 @@ function start() {
         x = circle_size / 2 + 30,
         y = circle_size / 2 + 30,
         color_max_circles = Math.floor((window_width + window_height - 60) / circle_gap),
-        color_scale = chroma.scale(["green", "purple"]).mode('lab')
+        color_scale = chroma.scale(["green", "blue"]).mode('lab')
     while (x + circle_gap / 2 <= window_width) {
         y = circle_size / 2 + 30
         while (y + circle_gap / 2 <= window_height) {
