@@ -11,8 +11,11 @@ function start() {
     var engine = Engine.create();
     
     var canvas = document.getElementById("canvas")
-    canvas.width = window.outerWidth
-    canvas.height = window.outerHeight
+    var window_width = window.outerWidth
+    var window_height = window.outerHeight
+    
+    canvas.width = window_width
+    canvas.height = window_height
 
     // create a renderer
     var render = Render.create({
@@ -24,7 +27,7 @@ function start() {
             pixelRatio: 1,
             background: '#FAFAFA',
             wireframes: false,
-            showMousePosition: false,
+            showMousePosition: true,
         }
     });
 
