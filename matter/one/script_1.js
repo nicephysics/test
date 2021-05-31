@@ -3,6 +3,7 @@ var Engine = Matter.Engine,
     Render = Matter.Render,
     Runner = Matter.Runner,
     Bodies = Matter.Bodies,
+    Mouse = Matter.Mouse,
     Composite = Matter.Composite;
 
 function start() {
@@ -19,6 +20,7 @@ function start() {
 //         element: document.querySelector("body"),
         canvas: canvas,
         engine: engine,
+        mouse: Mouse.create(canvas),
         options: {
             pixelRatio: 1,
             background: '#FAFAFA',
