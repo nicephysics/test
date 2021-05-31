@@ -32,9 +32,9 @@ function start() {
     });
 
     // create two boxes and a ground
-    var boxA = Bodies.rectangle(400, 200, 80, 80);
-    var boxB = Bodies.rectangle(450, 50, 80, 80);
-    var ground = Bodies.rectangle(400, 610, 810, 60, { isStatic: true });
+    var boxA = Bodies.rectangle(window_width / 2, 200, 80, 80);
+    var boxB = Bodies.rectangle(window_width / 2 + 50, 50, 80, 80);
+    var ground = Bodies.rectangle(window_width / 2, window_height + 10, window_width + 10, 60, { isStatic: true });
 
     // add all of the bodies to the world
     Composite.add(engine.world, [boxA, boxB, ground]);
